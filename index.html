@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios CCTV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1E293B"> 
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Material Design inspired scrollbar styling for dark theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent; /* For dark theme, track can be transparent or very dark */
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #2D2D2D; /* Darker track for dark mode */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #555; /* Slightly lighter thumb for dark mode against dark track */
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      .printable-area, .printable-area * {
+        visibility: visible;
+      }
+      .printable-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px !important; /* Ensure padding for print */
+        border: none !important;
+        box-shadow: none !important;
+        background-color: white !important; /* Force white background */
+        color: black !important; /* Force black text */
+      }
+      .printable-area .no-print {
+        display: none !important;
+      }
+      /* Override dark mode for print */
+      .printable-area div, .printable-area p, .printable-area span, .printable-area h3, .printable-area h4, .printable-area strong {
+        color: black !important;
+        background-color: transparent !important;
+      }
+      .printable-area .dark\:bg-slate-800 { background-color: white !important; }
+      .printable-area .dark\:text-\[rgba\(255\,255\,255\,0\.87\)\] { color: black !important; }
+      .printable-area .dark\:text-\[rgba\(255\,255\,255\,0\.60\)\] { color: black !important; }
+      .printable-area .dark\:text-slate-200 { color: black !important; } /* Fallback, ensure specific overrides */
+      .printable-area .dark\:border-\[rgba\(255\,255\,255\,0\.12\)\] { border-color: #ccc !important; }
+      .printable-area .dark\:border-slate-700 { border-color: #ccc !important; }
+      .printable-area .dark\:border-slate-600 { border-color: #ccc !important; }
+      .printable-area .prose, .printable-area .dark\:prose-invert {
+         --tw-prose-body: black !important;
+         --tw-prose-headings: black !important;
+         --tw-prose-lead: black !important;
+         --tw-prose-links: blue !important; /* Or black */
+         --tw-prose-bold: black !important;
+         --tw-prose-counters: black !important;
+         --tw-prose-bullets: black !important;
+         color: black !important;
+      }
+       .printable-area img {
+        max-width: 200px !important; /* Adjust image sizes for print */
+        max-height: 200px !important;
+        border: 1px solid #ccc !important;
+      }
+      .printable-area .status-badge { /* Simplified status badge for print */
+        border: 1px solid #ccc !important;
+        padding: 2px 4px !important;
+        background-color: #eee !important;
+        color: black !important;
+      }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.44.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-100 dark:bg-[#121212] text-slate-900 dark:text-[rgba(255,255,255,0.87)] antialiased">
+  <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

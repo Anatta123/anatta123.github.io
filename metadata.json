@@ -1,0 +1,8 @@
+{
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "name": "1.3  Gestor de Servicios CCTV",
+  "description": "",
+  "prompt": ""
+}
